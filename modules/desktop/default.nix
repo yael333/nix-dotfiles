@@ -50,6 +50,8 @@ in {
       ];
     };
 
+    services.xserver.libinput.enable = true;
+
     ## Apps/Services
     services.xserver.displayManager.lightdm.greeters.mini.user = config.user.name;
 

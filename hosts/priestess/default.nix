@@ -15,7 +15,6 @@
       };
       browsers = {
         default = "firefox";
-        brave.enable = false;
         firefox.enable = true;
         qutebrowser.enable = false;
       };
@@ -27,7 +26,7 @@
       media = {
         daw.enable = true;
         documents.enable = true;
-        graphics.enable = true;
+        #graphics.enable = true;
         mpv.enable = true;
         #recording.enable = true;
         #spotify.enable = true;
@@ -43,12 +42,13 @@
     dev = {
       #node.enable = true;
       rust.enable = true;
-      python.enable = true;
+      #python.enable = true;
       cc.enable = true;    
 };
     editors = {
-      default = "emacs"
+      default = "emacs";
       emacs.enable = true;
+      emacs.doom.enable = true;
       vim.enable = true;
     };
     shell = {
@@ -76,6 +76,9 @@
 
   networking.networkmanager.enable = true;
 
+  environment.variables = {
+  	USER = "yael";
+  };
 
   ## Personal backups
   # Syncthing is a bit heavy handed for my needs, so rsync to my NAS instead.

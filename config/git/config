@@ -1,11 +1,10 @@
 [user]
 	name = Henrik Lissner
 	email = git@henrik.io
-	signingKey = FA1FADD9440B688CAA75A057B60957CA074D39A3
 [commit]
-	gpgSign = true
+	gpgSign = false
 [tag]
-	gpgSign = true
+	gpgSign = false
 [core]
 	whitespace = trailing-space
 [init]

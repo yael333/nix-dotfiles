@@ -14,19 +14,20 @@ in {
     doom = rec {
       enable = mkBoolOpt false;
       forgeUrl = mkOpt types.str "https://github.com";
-      repoUrl = mkOpt types.str "${forgeUrl}/doomemacs/doomemacs";
-      configRepoUrl = mkOpt types.str "${forgeUrl}/hlissner/doom-emacs-private";
+      repoUrl = mkOpt types.str "https://github.com/doomemacs/doomemacs"; # TODO
+      configRepoUrl = mkOpt types.str "https://github.com/hlissner/doom-emacs-private"; #TODO
     };
   };
 
   config = mkIf cfg.enable {
     nixpkgs.overlays = [ inputs.emacs-overlay.overlay ];
+    services.emacs.enable = true;
 
     user.packages = with pkgs; [
       ## Emacs itself
       binutils       # native-comp needs 'as', provided by this
       # 28.2 + native-comp
-      ((emacsPackagesFor emacsNativeComp).emacsWithPackages
+      ((emacsPackagesFor emacsUnstable).emacsWithPackages
         (epkgs: [ epkgs.vterm ]))
 
       ## Doom dependencies
@@ -54,20 +55,23 @@ in {
       beancount
       unstable.fava  # HACK Momentarily broken on nixos-unstable
     ];
-
     env.PATH = [ "$XDG_CONFIG_HOME/emacs/bin" ];
 
     modules.shell.zsh.rcFiles = [ "${configDir}/emacs/aliases.zsh" ];
 
     fonts.fonts = [ pkgs.emacs-all-the-icons-fonts ];
-
     system.userActivationScripts = mkIf cfg.doom.enable {
       installDoomEmacs = ''
         if [ ! -d "$XDG_CONFIG_HOME/emacs" ]; then
-           git clone --depth=1 --single-branch "${cfg.doom.repoUrl}" "$XDG_CONFIG_HOME/emacs"
-           git clone "${cfg.doom.configRepoUrl}" "$XDG_CONFIG_HOME/doom"
-        fi
+		${pkgs.git}/bin/git clone --depth=1 --single-branch "${cfg.doom.repoUrl}" "$XDG_CONFIG_HOME/emacs"
+	fi
       '';
     };
-  };
+    home.configFile = {
+    	"doom/init.el".source     = "${configDir}/doom/init.el";
+	"doom/config.el".source   = "${configDir}/doom/config.el";
+	"doom/packages.el".source = "${configDir}/doom/packages.el";
+    };
+};
 }
+

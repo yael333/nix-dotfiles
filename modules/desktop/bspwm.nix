@@ -21,7 +21,7 @@ in {
       libnotify
       (polybar.override {
         pulseSupport = true;
-        nlSupport = true;
+        nlSupport = false;
       })
     ];
 
