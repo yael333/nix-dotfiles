@@ -1,7 +1,7 @@
 # flake.nix --- the heart of my dotfiles
 #
-# Author:  Henrik Lissner <contact@henrik.io>
-# URL:     https://github.com/hlissner/dotfiles
+# Author:  Yael Shroom / Henrik Lissner <contact@henrik.io>
+# URL:     https://github.com/konata-chan404/dotfiles
 # License: MIT
 #
 # Welcome to ground zero. Where the whole flake gets set up and all its modules
