@@ -18,8 +18,8 @@
       };
       gaming = {
         steam.enable = true;
-        emulators.enable = true;
-        emulators.psx.enable = true;
+        emulators.gb.enable = true;
+        emulators.gba.enable = true;
       };
       media = {
         documents.enable = true;

@@ -8,7 +8,7 @@ with lib;
 with lib.my;
 let cfg = config.modules.desktop.term.kitty;
 in {
-  options.modules.desktop.term.st = {
+  options.modules.desktop.term.kitty = {
     enable = mkBoolOpt false;
   };
 

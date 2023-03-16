@@ -39,7 +39,7 @@ in {
 
       # Sprite sheets & animation
       (if cfg.sprites.enable then [
-        aseprite-unfree
+        libresprite
       ] else []) ++
 
       # 3D modelling
