@@ -42,9 +42,9 @@
 #
 # 7. Install dotfiles:
 #      nix-env -iA nixos.git nixos.nixFlakes
-#      mkdir -p /mnt/home/hlissner/.config
-#      cd /mnt/home/hlissner/.config
-#      git clone https://github.com/hlissner/dotfiles
+#      mkdir -p /mnt/home/yael/.config
+#      cd /mnt/home/yael/.config
+#      git clone https://github.com/konata-chan404/dotfiles
 #      nixos-install --root /mnt --flake .#linode --impure
 #
 # 8. Reboot into "Boot" profile.

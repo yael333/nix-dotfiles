@@ -1,7 +1,6 @@
 # modules/desktop/term/st.nix
 #
-# I like (x)st. This appears to be a controversial opinion; don't tell anyone,
-# mkay?
+# Pretty good base level terminal emulator, second to Kitty.
 
 { options, config, lib, pkgs, ... }:
 

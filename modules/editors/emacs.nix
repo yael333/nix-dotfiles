@@ -1,6 +1,4 @@
-# Emacs is my main driver. I'm the author of Doom Emacs
-# https://github.com/hlissner/doom-emacs. This module sets it up to meet my
-# particular Doomy needs.
+# I love emacs
 
 { config, lib, pkgs, inputs, ... }:
 
@@ -13,9 +11,7 @@ in {
     enable = mkBoolOpt false;
     doom = rec {
       enable = mkBoolOpt false;
-      forgeUrl = mkOpt types.str "https://github.com";
-      repoUrl = mkOpt types.str "https://github.com/doomemacs/doomemacs"; # TODO
-      configRepoUrl = mkOpt types.str "https://github.com/hlissner/doom-emacs-private"; #TODO
+      repoUrl = mkOpt types.str "https://github.com/doomemacs/doomemacs";
     };
   };
 

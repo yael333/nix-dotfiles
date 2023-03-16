@@ -10,9 +10,9 @@
 [init]
 	defaultBranch = main
 [github]
-	user = hlissner
+	user = konata-chan404
 [gitlab]
-	user = hlissner
+	user = konata-chan404
 [push]
 	autoSquash = true
 [push]
@@ -35,7 +35,7 @@
     insteadOf = gh:
 [url "git@github.com:"]
     insteadOf = ssh+gh:
-[url "git@github.com:hlissner/"]
+[url "git@github.com:konata-chan404/"]
     insteadOf = gh:/
 [url "https://gitlab.com/"]
     insteadOf = gl:

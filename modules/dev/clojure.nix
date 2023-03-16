@@ -1,6 +1,6 @@
 # modules/dev/clojure.nix --- https://clojure.org/
 #
-# I don't use clojure... yet.
+# Not sure if this is the worst or best JVM language yet.
 
 { config, options, lib, pkgs, my, ... }:
 

@@ -20,20 +20,8 @@
   # };
 
   # Projects
-  project-discourse-theme = {
-    path = ./project/discourse-theme;
-    description = "A Discourse component or theme";
-  };
-  project-discourse-plugin = {
-    path = ./project/discourse-plugin;
-    description = "A Discourse component or theme";
-  };
-  project-nodejs = {
-    path = ./project/nodejs;
-    description = "NodeJS dev environment";
-  };
-  # TODO project-rust
-  # TODO project-rust-bevy
-  # TODO project-love2d
-  # TODO for Laravel, p?react, emacs plugins, rails, etc
+  # project-nodejs = {
+  #  path = ./project/nodejs;
+  #  description = "NodeJS dev environment";
+  #};
 }
