@@ -4,7 +4,7 @@
 **Greetings!** Welcome to my little grimoire of declarative configuration and expressions~
 Here I organize all things Nix, It is heavily ~~borrowed~~ inspired by [hlissner's dotfiles](https://github.com/hlissner/dotfiles) and [digga](https://github.com/divnix/digga). There's nothing much to add besides that, it is ever evolving and changing.
 
-<img src="/../screenshots/priestess.png"/>
+<img src="screenshots/priestess.png"/>
 
 ------
 
